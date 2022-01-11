@@ -1,0 +1,23 @@
+{
+  "name": "testelpelo7",
+  "version": "1.0.0",
+  "description": "Landing page de nivelamento",
+  "main": "index.js",
+  "scripts": {
+    "watch": "echo \"Running CSS watch\" && node-sass --watch scss -o src/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rods25/testeLpElo7.git"
+  },
+  "author": "Rodrigo Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rods25/testeLpElo7/issues"
+  },
+  "homepage": "https://github.com/rods25/testeLpElo7#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
