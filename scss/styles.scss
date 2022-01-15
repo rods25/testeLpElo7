@@ -1,5 +1,129 @@
-$test: red;
+/* Text Color */
+$tc-default: #7d7873;
+$tc-white: #fff; 
+$tc-featured: #359c9c;
+$tc-author: #f9a92f;
+
+/* Background Color */
+$bc-default: #fff;
+$bc-secondary: #f8f8f8;
+
 body {
-    background-color: $test;
+    color: $tc-default;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
 }
- 
+
+hr {
+    border-bottom: 2px solid #cbcbcb;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    margin: 20px auto;
+    width: 200px;
+}
+
+a {
+    display: block;
+}
+
+h3 {
+    margin: 50px auto;
+    font-weight: bold;
+}
+
+header, section {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;    
+}
+
+.header {
+    font-weight: bold;
+
+    &_bg-work {
+        background: url('../img/foto-header.png');
+        height: 450px;
+        h1 {
+            color: $tc-white;
+            font-size: 24px;
+        }
+    } 
+    &_title {
+        margin: 25px 50px;
+    }
+} 
+
+.go-to-jobs, .know-more {
+    color: $tc-featured;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.squad {
+    background-color: $bc-secondary;
+    margin: 50px auto;
+    padding: 50px 75px;
+    color: black;
+
+    &_fst-item {
+        display: grid;
+        grid-template-columns: 400px 460px;
+        .text {
+            text-align: left;
+            margin-left: 50px;
+            p {
+                text-align: justify;
+            }
+        }
+        
+    }
+
+    &_scd-item {
+        .title {
+            margin: 50px 0;
+        }
+        .dream-team {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        img {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.workplace {
+    ul {
+        display: flex;
+        li {
+            margin-right: 35px;
+
+            &:first-child {
+                margin-left: 50px;
+            }
+            &:last-child {
+                margin-right: 50px;  
+            }   
+        }
+    }
+    h3 {
+        margin: 30px auto 25px;
+    }
+    p {
+        text-align: justify;
+    }
+    & > img {
+        margin: 50px 0;
+    }
+}

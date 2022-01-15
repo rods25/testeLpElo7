@@ -1,2 +1,89 @@
+/* Text Color */
+/* Background Color */
 body {
-  background-color: red; }
+  color: #7d7873;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center; }
+
+hr {
+  border-bottom: 2px solid #cbcbcb;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  margin: 20px auto;
+  width: 200px; }
+
+a {
+  display: block; }
+
+h3 {
+  margin: 50px auto;
+  font-weight: bold; }
+
+header, section {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%; }
+
+.header {
+  font-weight: bold; }
+  .header_bg-work {
+    background: url("../img/foto-header.png");
+    height: 450px; }
+    .header_bg-work h1 {
+      color: #fff;
+      font-size: 24px; }
+  .header_title {
+    margin: 25px 50px; }
+
+.go-to-jobs, .know-more {
+  color: #359c9c;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.squad {
+  background-color: #f8f8f8;
+  margin: 50px auto;
+  padding: 50px 75px;
+  color: black; }
+  .squad_fst-item {
+    display: grid;
+    grid-template-columns: 400px 460px; }
+    .squad_fst-item .text {
+      text-align: left;
+      margin-left: 50px; }
+      .squad_fst-item .text p {
+        text-align: justify; }
+  .squad_scd-item .title {
+    margin: 50px 0; }
+  .squad_scd-item .dream-team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .squad_scd-item img {
+    margin-right: 10px; }
+    .squad_scd-item img:last-child {
+      margin-right: 0; }
+
+.workplace ul {
+  display: flex; }
+  .workplace ul li {
+    margin-right: 35px; }
+    .workplace ul li:first-child {
+      margin-left: 50px; }
+    .workplace ul li:last-child {
+      margin-right: 50px; }
+
+.workplace h3 {
+  margin: 30px auto 25px; }
+
+.workplace p {
+  text-align: justify; }
+
+.workplace > img {
+  margin: 50px 0; }
