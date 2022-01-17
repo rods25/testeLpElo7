@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Teste de Programação Elo7</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=2.0">
     <link href="src/css/reset.css" type="text/css" rel="stylesheet">
     <link href="src/css/styles.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <section id="header">
+        <div class="container">
         <div class="header header_bg-work">
             <h1>Trabalhe no Elo7</h1>
         </div>
@@ -20,12 +21,12 @@
             </p>
         </div>
         <hr/>
-    </header>
+            <a href="#stack" class="go-to-jobs">Vagas em aberto <span class="icon">>></span></a>
+        </div>
+    </section>
     
     <section id="squad">
         <div class="container">
-            <a href="" class="go-to-jobs">Vagas em aberto <span class="icon">>></span></a>
-            <div class="squad wrapper">
                 <div class="squad_fst-item">
                     <div class="video">
                         <img src="src/img/placeholder-video.png" alt="" class="placeholder">
@@ -36,7 +37,7 @@
                     </div>
                 </div>
                 <div class="squad_scd-item">
-                    <h3 class="title">Conheça nosso time fora de série</h3>
+                <h3 class="title">Conheça nosso time <br>fora de série</h3>
                     <div class="dream-team">
                         <img src="src/img/camila.png" alt="">
                         <img src="src/img/guto.png" alt="">
@@ -45,21 +46,20 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section id="workplace">
-        <div class="container workplace">
+        <div class="container">
             <ul>
                 <li>
                     <img src="src/img/qualidade.png" alt="">
                     <h3>Qualidade de vida</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus repellat id itaque officia. Nobis ex quos aperiam adipisci commodi, dicta quas consectetur porro voluptate numquam voluptates expedita, placeat reiciendis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus repellat id itaque officia. Nobis ex quos aperiam adipisci commodi</p>
                 </li>
                 <li>
                     <img src="src/img/descontracao.png" alt="">
                     <h3>Ambiente descontraído</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus repellat id itaque officia. Nobis ex quos aperiam adipisci commodi, dicta quas consectetur porro voluptate numquam voluptates expedita, placeat reiciendis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus repellat id itaque officia. Nobis ex quos aperiam adipisci commodi, dicta quas consectetur porro voluptate numquam voluptates expedita, placeat reiciendis. Quaerat voluptatibus repellat id itaque officia. Nobis ex quos aperiam adipisci commodi</p>
                 </li>
                 <li>
                     <img src="src/img/atividades.png" alt="">
@@ -74,13 +74,12 @@
     </section>
 
     <section id="stack">
-        <div class="container">
+        <div class="container stack">
             <h3>Vagas em aberto</h3>
-            <div class="wrapper">
-                <h3>Desenvolvimento</h3>
-                <ul class="jobs">
-                    <li>
-                        <a href="" class="title">
+            <h2>Desenvolvimento</h2>
+            <ul class="jobs"></ul>
+        </div>
+    </section>
 
                             <span class="location"></span>
                         </a>
