@@ -78,24 +78,24 @@ section {
         margin: 0;    
     }
 
-.header {
-    &_bg-work {
-        background: url('../img/foto-header.png');
+    .header {
+        &_bg-work {
+            background: url('../img/foto-header.png');
             background-position: center;
-        height: 450px;
+            height: 450px;
             position: relative;
-        h1 {
+            h1 {
                 position: absolute;
                 left: 0;
                 right: 0;
                 bottom: 140px;
-        }
-    } 
-    &_title {
+            }
+        } 
+        &_title {
             margin: 25px 35px 0;
             p {
                 line-height: 28px;
-    }
+            }
         }
     } 
         
@@ -112,16 +112,16 @@ section {
 
 #squad {
    .container {
-    background-color: $bc-secondary;
-    margin: 50px auto;
+        background-color: $bc-secondary;
+        margin: 50px auto;
         padding: 50px;
    }
-
+    
    .squad {
-    &_fst-item {
+        &_fst-item {
             display: flex;
-        .text {
-            margin-left: 50px;
+            .text {
+                margin-left: 50px;
             }
             h3 {
                 line-height: 32px;
@@ -138,29 +138,29 @@ section {
             }
         }
 
-    &_scd-item {
-        .title {
+        &_scd-item {
+            .title {
                 font-size: 20px;
                 line-height: 24px;
-        }
-        .dream-team {
-            display: flex;
-            flex-direction: row;
+            }
+            .dream-team {
+                display: flex;
+                flex-direction: row;
                 width: 50%;
-            justify-content: center;
+                justify-content: center;
                 align-items: center;
                 margin: 0 auto;
-        }
-        img {
-            margin-right: 10px;
+            }
+            img {
+                margin-right: 10px;
                 width: 50%;
 
-            &:last-child {
-                margin-right: 0;
+                &:last-child {
+                    margin-right: 0;
                 }
             }
         }
-    }
+   }
 }
 
 #workplace {
@@ -190,7 +190,7 @@ section {
         line-height: 24px;
         letter-spacing: 1.5px;
     }
-    }
+}
 
 #stack {
     h3 {
@@ -224,5 +224,89 @@ section {
         }
     }
 }
+
+@media screen and (max-width: 768px ) {
+    #squad {
+        .squad_fst-item {
+            flex-direction: column;
+            .video img {
+                width: 100%;
+            }
+            .text {
+                margin: 35px auto 0;
+            }
+        }
+    }
+
+    #workplace {
+        .container {
+            margin: 30px 30px 0 30px;
+        }
+        ul li{
+            &:last-child {
+                margin-right: 0;
+            }
+            img {
+                width: 40%;
+            }
+            h3 {
+                margin: 30px auto;
+            }
+            p {
+                text-align: center;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 425px ) {
+    h3 {
+        margin: 35px auto;
+    }
+    #squad .squad {     
+        &_scd-item {
+            .dream-team {
+                display: inline;
+            }
+            img {
+                width: 45%;
+                margin: 10px 5px;
+                border-radius: 50%;
+                border: 2px solid rgba(0,0,0,0.5);
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    #workplace ul {
+        flex-direction: column;
+        li {
+            margin-right: 0;
+            margin-bottom: 35px;
+            width: 100%;
+
+            &:last-child {
+                margin-right: 0;
+                margin-bottom: 0;  
+            }   
+        }
+    }
+
+    #stack {
+        h3, h2 {
+            margin: 20px auto;
+        }
+        .jobs a {
+            margin-bottom: 15px;
+            span {
+                left: 0;
+                right: auto;
+                display: block;
+            }
+        } 
     }
 }
