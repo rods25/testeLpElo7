@@ -1,19 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+
 /* Text Color */
-$tc-default: #7d7873;
+$tc-default: #9b9b9b;
+$tc-default-dark: #7d7873;
 $tc-white: #fff; 
 $tc-featured: #359c9c;
+$tc-title: #7d7873;
 $tc-author: #f9a92f;
 
 /* Background Color */
 $bc-default: #fff;
 $bc-secondary: #f8f8f8;
 
-body {
+body * {
     color: $tc-default;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 20px;
     text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 hr {
@@ -27,103 +36,193 @@ hr {
 
 a {
     display: block;
+    &:hover {
+        color: $tc-default;
+
+        span {
+            color: $tc-featured;
+        }
+    }
 }
 
-h3 {
-    margin: 50px auto;
+h1,h3,h2 {
     font-weight: bold;
 }
 
-header, section {
+h1 {
+    color: $tc-white;
+    font-size: 47px;
+    line-height: 47px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+h3 {
+    color: $tc-title;
+    font-size: 17px;
+    margin: 50px auto;
+    text-transform: uppercase;
+}
+
+section {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;    
 }
 
-.header {
-    font-weight: bold;
+.container {
+    margin: 50px 50px 0 50px;
+}
 
+#header {
+    .container {
+        margin: 0;    
+    }
+
+.header {
     &_bg-work {
         background: url('../img/foto-header.png');
+            background-position: center;
         height: 450px;
+            position: relative;
         h1 {
-            color: $tc-white;
-            font-size: 24px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 140px;
         }
     } 
     &_title {
-        margin: 25px 50px;
+            margin: 25px 35px 0;
+            p {
+                line-height: 28px;
     }
+        }
+    } 
+        
 } 
 
 .go-to-jobs, .know-more {
     color: $tc-featured;
-    font-size: 18px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
     font-weight: bold;
-    margin-top: 20px;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-.squad {
+#squad {
+   .container {
     background-color: $bc-secondary;
     margin: 50px auto;
-    padding: 50px 75px;
-    color: black;
+        padding: 50px;
+   }
 
+   .squad {
     &_fst-item {
-        display: grid;
-        grid-template-columns: 400px 460px;
+            display: flex;
         .text {
-            text-align: left;
             margin-left: 50px;
+            }
+            h3 {
+                line-height: 32px;
+                margin: 0;
+                text-align: left;
+                span {
+                    color: $tc-author;
+                }
+            }
             p {
+                color: $tc-default-dark;
+                margin-top: 25px;
                 text-align: justify;
             }
         }
-        
-    }
 
     &_scd-item {
         .title {
-            margin: 50px 0;
+                font-size: 20px;
+                line-height: 24px;
         }
         .dream-team {
             display: flex;
             flex-direction: row;
+                width: 50%;
             justify-content: center;
+                align-items: center;
+                margin: 0 auto;
         }
         img {
             margin-right: 10px;
+                width: 50%;
 
             &:last-child {
                 margin-right: 0;
+                }
             }
         }
     }
 }
 
-.workplace {
+#workplace {
+    .container > img {
+        margin-top: 60px;
+        width: 100%;
+    }
     ul {
         display: flex;
         li {
             margin-right: 35px;
+            width: 100%;
 
-            &:first-child {
-                margin-left: 50px;
-            }
             &:last-child {
-                margin-right: 50px;  
+                margin-right: 35px;  
             }   
+        }
+        img {
+            width: auto;
         }
     }
     h3 {
-        margin: 30px auto 25px;
+        margin: 30px auto 40px;
     }
     p {
         text-align: justify;
+        line-height: 24px;
+        letter-spacing: 1.5px;
     }
-    & > img {
-        margin: 50px 0;
+    }
+
+#stack {
+    h3 {
+        margin-bottom: 60px;
+    }
+    h2 {
+        color: $tc-default-dark;
+        margin-bottom: 45px;
+        text-align: left;
+    }
+    .jobs a{
+        color: $tc-featured;
+        text-align: left;
+        position: relative;
+        text-transform: none;
+        text-decoration: none;
+        padding-bottom: 15px;
+
+        &:hover {
+            color: $tc-default;
+    
+            span {
+                color: $tc-featured;
+            }
+        }
+        
+        span {
+            color: $tc-default;
+            position: absolute;
+            right: 0;
+        }
+    }
+}
     }
 }
