@@ -108,8 +108,9 @@
     <script>
         // Formata e envia os dados tratados para o template.
         let formatJobsData = function(list) {
+            // Callback em caso de uma lista vazia ou undefined
             if(!list) {
-                return document.querySelector('#stack .jobs').innerHTML = '<p>Desculpe, tivemos problemas ao carregar as vagas disponíveis. Atualize a página, por favor :)</p>';
+                return document.querySelector('#stack .jobs').innerHTML = '<li class="errorMessage">Desculpe, tivemos problemas ao carregar as vagas de desenvolvimento disponíveis. <br>Atualize a página, por favor :)</li>';
             }
 
             list.forEach(job => {
@@ -123,12 +124,12 @@
             });
         };
         
+        // Para simular cenário de erro, favor colocar uma url inválida
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://www.mocky.io/v2/5d6fb6b1310000f89166087b", false);
+        xhr.open("GET", "https://www.mocky.io/v2/5d6fb6b1310000f89166087b", true);
         xhr.onload = function() {
-            let jobs = [],
-                response = xhr.responseText,
-                jobsList = JSON.parse(response);
+            let response = xhr.responseText,
+                jobsList = !response ? {} : JSON.parse(response);
 
             formatJobsData(jobsList.vagas);
         };
