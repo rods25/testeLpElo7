@@ -38,7 +38,7 @@ h1 {
   line-height: 47px;
   text-shadow: 2px 2px 5px #000; }
 
-h3 {
+h2 {
   color: #7d7873;
   font-size: 17px;
   margin: 50px auto;
@@ -55,6 +55,11 @@ h3 {
   font-size: 18px;
   font-weight: bold;
   color: #359c9c; }
+
+.loading {
+  display: none; }
+  .loading.ativo {
+    display: block; }
 
 section {
   margin: 0 auto;
@@ -100,11 +105,11 @@ section {
   display: flex; }
   #squad .squad_fst-item .text {
     margin-left: 50px; }
-  #squad .squad_fst-item h3 {
+  #squad .squad_fst-item h2 {
     line-height: 32px;
     margin: 0;
     text-align: left; }
-    #squad .squad_fst-item h3 span {
+    #squad .squad_fst-item h2 span {
       color: #f9a92f; }
   #squad .squad_fst-item p {
     color: #7d7873;
@@ -125,6 +130,7 @@ section {
 
 #squad .squad_scd-item img {
   margin-right: 10px;
+  max-width: 208px;
   width: 50%; }
   #squad .squad_scd-item img:last-child {
     margin-right: 0; }
@@ -143,7 +149,7 @@ section {
   #workplace ul img {
     width: auto; }
 
-#workplace h3 {
+#workplace h2 {
   margin: 30px auto 40px; }
 
 #workplace p {
@@ -151,10 +157,10 @@ section {
   line-height: 24px;
   letter-spacing: 1.5px; }
 
-#stack h3 {
+#stack h2 {
   margin-bottom: 60px; }
 
-#stack h2 {
+#stack h3 {
   color: #7d7873;
   margin-bottom: 45px;
   text-align: left; }
@@ -187,14 +193,15 @@ section {
   #workplace ul li:last-child {
     margin-right: 0; }
   #workplace ul li img {
-    width: 40%; }
-  #workplace ul li h3 {
+    width: 40%;
+    max-width: 150px; }
+  #workplace ul li h2 {
     margin: 30px auto; }
   #workplace ul li p {
     text-align: center; } }
 
-@media screen and (max-width: 425px) {
-  h3 {
+@media screen and (max-width: 640px) {
+  h2 {
     margin: 35px auto; }
   #squad .squad_scd-item .dream-team {
     display: inline; }
@@ -208,11 +215,10 @@ section {
   #workplace ul {
     flex-direction: column; }
     #workplace ul li {
-      margin-right: 0;
-      margin-bottom: 35px;
-      width: 100%; }
+      margin: 0 auto 35px;
+      width: 80%; }
       #workplace ul li:last-child {
-        margin-right: 0;
+        margin-right: auto;
         margin-bottom: 0; }
   #stack h3, #stack h2 {
     margin: 20px auto; }

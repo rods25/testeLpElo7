@@ -60,7 +60,7 @@ h1 {
     text-shadow: 2px 2px 5px #000;
 }
 
-h3 {
+h2 {
     color: $tc-title;
     font-size: 17px;
     margin: 50px auto;
@@ -79,6 +79,13 @@ h3 {
     font-size: 18px;
     font-weight: bold;
     color: $tc-featured;
+}
+
+.loading {
+    display: none;
+    &.ativo {
+        display:block;
+    }
 }
 
 section {
@@ -141,7 +148,7 @@ section {
             .text {
                 margin-left: 50px;
             }
-            h3 {
+            h2 {
                 line-height: 32px;
                 margin: 0;
                 text-align: left;
@@ -171,6 +178,7 @@ section {
             }
             img {
                 margin-right: 10px;
+                max-width: 208px;
                 width: 50%;
 
                 &:last-child {
@@ -200,7 +208,7 @@ section {
             width: auto;
         }
     }
-    h3 {
+    h2 {
         margin: 30px auto 40px;
     }
     p {
@@ -211,10 +219,10 @@ section {
 }
 
 #stack {
-    h3 {
+    h2 {
         margin-bottom: 60px;
     }
-    h2 {
+    h3 {
         color: $tc-default-dark;
         margin-bottom: 45px;
         text-align: left;
@@ -266,8 +274,9 @@ section {
             }
             img {
                 width: 40%;
+                max-width: 150px;
             }
-            h3 {
+            h2 {
                 margin: 30px auto;
             }
             p {
@@ -278,8 +287,8 @@ section {
     }
 }
 
-@media screen and (max-width: 425px ) {
-    h3 {
+@media screen and (max-width: 640px ) {
+    h2 {
         margin: 35px auto;
     }
     #squad .squad {     
@@ -303,12 +312,11 @@ section {
     #workplace ul {
         flex-direction: column;
         li {
-            margin-right: 0;
-            margin-bottom: 35px;
-            width: 100%;
+            margin: 0 auto 35px;
+            width: 80%;
 
             &:last-child {
-                margin-right: 0;
+                margin-right: auto;
                 margin-bottom: 0;  
             }   
         }
@@ -328,3 +336,5 @@ section {
         } 
     }
 }
+
+ 

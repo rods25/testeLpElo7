@@ -4,7 +4,7 @@
   "description": "Landing page de nivelamento",
   "main": "index.js",
   "scripts": {
-    "watch": "echo \"Running CSS watch\" && node-sass --watch scss -o src/css && node-sass --watch reset -o src/reset",
+    "watch": "echo \"Running CSS watch\" && node-sass --watch scss -o src/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -41,20 +41,20 @@
         <div class="container">
             <div class="squad_fst-item">
                 <div class="video">
-                    <img src="src/img/placeholder-video.png" alt="" class="placeholder">
+                    <img loading="lazy" src="src/img/placeholder-video.png" alt="" class="placeholder">
                 </div>
                 <div class="text">
-                    <h3>Palavra do CEO <br><span class="author">Carlos Curioni</span></h3>
+                    <h2>Palavra do CEO <br><span class="author">Carlos Curioni</span></h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel blanditiis, exercitationem non dolore quisquam architecto expedita ea voluptatem. Aperiam, totam ad! Soluta beatae incidunt maiores accusamus hic laboriosam tenetur.</p>
                 </div>
             </div>
             <div class="squad_scd-item">
-                <h3 class="title">Conheça nosso time <br>fora de série</h3>
+                <h2 class="title">Conheça nosso time <br>fora de série</h2>
                 <div class="dream-team">
-                    <img src="src/img/camila.png" alt="">
-                    <img src="src/img/guto.png" alt="">
-                    <img src="src/img/david.png" alt="">
-                    <img src="src/img/beatriz.png" alt="">
+                    <img loading="lazy" src="src/img/camila.png" alt="">
+                    <img loading="lazy" src="src/img/guto.png" alt="">
+                    <img loading="lazy" src="src/img/david.png" alt="">
+                    <img loading="lazy" src="src/img/beatriz.png" alt="">
                 </div>
             </div>
         </div>
@@ -64,18 +64,18 @@
         <div class="container">
             <ul>
                 <li>
-                    <img src="src/img/qualidade.png" alt="">
-                    <h3>Qualidade de vida</h3>
+                    <img loading="lazy" src="src/img/qualidade.png" alt="">
+                    <h2>Qualidade de vida</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus repellat id itaque officia. Nobis ex quos aperiam adipisci commodi</p>
                 </li>
                 <li>
-                    <img src="src/img/descontracao.png" alt="">
-                    <h3>Ambiente descontraído</h3>
+                    <img loading="lazy" src="src/img/descontracao.png" alt="">
+                    <h2>Ambiente descontraído</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus repellat id itaque officia. Nobis ex quos aperiam adipisci commodi, dicta quas consectetur porro voluptate numquam voluptates expedita, placeat reiciendis. Quaerat voluptatibus repellat id itaque officia. Nobis ex quos aperiam adipisci commodi</p>
                 </li>
                 <li>
-                    <img src="src/img/atividades.png" alt="">
-                    <h3>Atividades extras</h3>
+                    <img loading="lazy" src="src/img/atividades.png" alt="">
+                    <h2>Atividades extras</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus repellat id itaque officia. Nobis ex quos aperiam adipisci commodi, dicta quas consectetur porro voluptate numquam voluptates expedita, placeat reiciendis.</p>
                 </li>
             </ul>
@@ -93,14 +93,17 @@
                     </g>
                 </svg>
             </span></a>
-            <img src="src/img/foto-bottom.png" alt="">
+            <img loading="lazy" src="src/img/foto-bottom.png" alt="">
         </div>
     </section>
 
     <section id="stack">
         <div class="container stack">
-            <h3>Vagas em aberto</h3>
-            <h2>Desenvolvimento</h2>
+            <h2>Vagas em aberto</h2>
+            <h3>Desenvolvimento</h3>
+            <p class="loading ativo">
+                Carregando vagas
+            </p>
             <ul class="jobs"></ul>
         </div>
     </section>
@@ -119,9 +122,12 @@
                         hasLocation = job.localizacao ? `<span class="location">${job.localizacao.bairro} - ${job.localizacao.cidade}, ${job.localizacao.pais}</span></a></li>` : `<span class="location">Remoto</span></a></li>`,
                         fullLine = initLine += hasLocation;
 
-                        document.querySelector('#stack .jobs').innerHTML += fullLine;                    
+                        document.querySelector('#stack .jobs').innerHTML += fullLine;
                 }
             });
+        
+            document.querySelector('.loading.ativo').classList.remove('ativo');
+
         };
         
         // Para simular cenário de erro, favor colocar uma url inválida
